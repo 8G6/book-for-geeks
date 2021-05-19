@@ -1,6 +1,7 @@
 clik=()=>{
 	document.getElementById("burger").classList.toggle("change");
 	document.querySelector('ul').classList.toggle("cool")
+	document.querySelector('.nav').classList.toggle("cool")
 	let lis = document.querySelectorAll('.links li')
 	console.log(lis)
 	i=0.5
