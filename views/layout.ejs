@@ -14,15 +14,25 @@
             <ul class='links'>
                 <li><a href="/">Home</a></li>
                 <li><a href="/category">Categories</a></li>
-                <li><a href="/category">Authors</a></li>
+                <li><a href="/about">About Us</a></li>
                 <li><a href="/contact">Contact Us</a></li>
-            </ul> 
+            </ul>
+            <ul class='user-ui'>
+				<li><a href="/login">Login</a></li>
+				<li><a href="/register">Register</a></li>
+			</ul>
+            <div class="menu-bg" id="menu-bg"></div>
+		<div class="menu-bg" id="menu-bg"></div> 
             <div id="burger" onclick="clik()">
 				<div id="l1" class="l"></div>
 				<div id="l2" class="l"></div>
 				<div id="l3" class="l"></div>
-			</div>
+		  </div>
+            <input type="text" name="query" id="query" placeholder='search by name authors etc...'>
+            <div id='search'></div>
+            <img src="pics/icon/no-bg/user-blue.png" alt="img" id='user-img' onclick='Onclick()'>
          </nav>
     <script src="js/main.js"></script>
+    <%- body %>
 </body>
 </html>

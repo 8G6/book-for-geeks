@@ -2,21 +2,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration:none;
 }
-a:hover{
+.links a:hover{
     font-size:22px;
     transition: all 0.5s ease;
     text-shadow: rgb(0, 255, 242) 5px 5px 10px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;  
 }
-a{
+.links a{
     font-size:20px;
 }
 .logo{
     position:fixed;
     left:33vw;
     top:16vh;
-    filter: drop-shadow(5px 5px 5px rgb(1, 20, 20));
+    filter: drop-shadow(5px 5px 5px rgb(0, 255, 85));
 }
 .logo:hover{
     filter: drop-shadow(5px 5px 5px rgb(3, 116, 255));
@@ -65,11 +66,11 @@ nav{
        position:relative;
        right:12px;
        margin:2px 2px 2px 2px;
-    
    }
 #user-img:hover{
       background-color: rgb(235, 249, 252);
       border-radius: 100%;
+      
 }
 #search{
        background-image: url('../pics/icon/search.png');
@@ -92,3 +93,11 @@ nav{
     width:65%;
     height: 5%;
 }
+.user-ui{
+    list-style:none;
+    position: fixed;
+    left:10%;
+    opacity: 0;
+}
+
+

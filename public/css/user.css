@@ -1,0 +1,17 @@
+.logo{
+    left:1vw;
+    top:1vh;
+}
+#user-img{
+    display:none;
+}
+
+nav{
+    height: 25vh;
+}
+#query{
+    display:none;
+}
+#search{
+    display:none;
+}

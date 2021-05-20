@@ -1,23 +1,46 @@
-<form id="register" method="get" action="/register">    
-    <label><b>User Name     
-    </label>    
-    <input type="text" name="Uname" id="Uname" placeholder="Username">    
-    <br><br>    
-    <label><b>Password     
-    </b>    
-    sele
-    </label>    
-    <input type="Password" name="Pass" id="Pass" placeholder="Password">    
-    <br><br>     
-    <label><b>Email Id 
-    </b>    
-    </label>    
-    <input type="email" name="email" id="email" placeholder="Email">    
-    <br><br>    
-    <input type="button" name="reg" id="reg" value="Register">       
-    <br><br>    
-    <input type="checkbox" id="check">    
-    <span>Already a member?</span>    
-    <br><br>    
-    <a href="#">Login in here</a>    
-</form>     
+<link rel="stylesheet" href="css/user.css">
+<style>
+    body{
+ background-image: url('../pics/images/reg-desktop.jpg');
+}
+.login{
+    box-shadow:red 1px 1px 2px;
+    background-color: #fffffff0;
+    position:fixed;
+    top:50%;
+    left:40%;
+    opacity: .5;
+    text-align:center;
+    justify-content:center;
+}
+
+table{
+    padding:20px 20px 20px 20px;
+    opacity: 1;
+    text-align:left;
+    border-spacing: px;
+}
+</style>
+<div class='login'>
+    <h1>Register</h1>
+<form action="/register" method="POST">
+    <table> 
+        <tr>
+            <td>Name</td>
+            <td>:</td>
+            <td><input type="text" id='name' name="name"></td>
+        </tr>
+        <tr>
+            <td>email</td>
+            <td>:</td>
+            <td><input type="email" id='email' name="email"></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td>:</td>
+            <td><input type="password" id='name' name="password"></td>
+        </tr collapse='2'>
+        <td><button type="submit">Register</button></td>
+    </table>
+</form>
+</div>

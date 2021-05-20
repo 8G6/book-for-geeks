@@ -1,6 +1,42 @@
-<div id="body">
-    <form action="/register" method="post">
-        <input type="text" name="name">
-        <input type="text" name="password">
-    </form>
+<link rel="stylesheet" href="css/user.css">
+<style>
+body{
+ background-image: url('../pics/images/login-desktop.jpg');
+}
+
+.login{
+    box-shadow:red 1px 1px 2px;
+    background-color: #fffffff0;
+    position:fixed;
+    top:50%;
+    left:40%;
+    opacity: .5;
+    text-align:center;
+    justify-content:center;
+}
+
+table{
+    padding:20px 20px 20px 20px;
+    opacity: 1;
+    text-align:left;
+    border-spacing: px;
+}
+</style>
+<div class='login'>
+    <h1>Login</h1>
+<form action="/login" method="POST">
+    <table> 
+        <tr>
+            <td>Name</td>
+            <td>:</td>
+            <td><input type="text" name="name"></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td>:</td>
+            <td><input type="password" name="password"></td>
+        </tr collapse='2'>
+        <td><button type="submit">Login</button></td>
+    </table>
+</form>
 </div>
