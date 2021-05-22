@@ -1,6 +1,8 @@
 .env
 *.exe
+*.cmd
 *.bat
 *.jpg
 *.png
+update.js
 node_modules

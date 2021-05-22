@@ -25,11 +25,16 @@ table{
 <div class='login'>
     <h1>Login</h1>
 <form action="/login" method="POST">
+    <h3>
+        <% if (messages.error)  { %>
+            <%= messages.error  %>
+          <% } %>
+    </h3>
     <table> 
         <tr>
-            <td>Name</td>
+            <td>email</td>
             <td>:</td>
-            <td><input type="text" name="name"></td>
+            <td><input type="email" name="email" id="email"></td>
         </tr>
         <tr>
             <td>Password</td>
