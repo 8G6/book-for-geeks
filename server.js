@@ -6,7 +6,8 @@ const express  = require('express');
 const app      = express();
 const port     = process.env.PORT || 3000
 const layout   = require('express-ejs-layouts')
-const Root     = require('./roots/login')
+const login    = require('./roots/login')
+const add      = require('./roots/add')
 const mongoose = require('mongoose')
 
 app.set('view engine','ejs');
@@ -15,7 +16,7 @@ app.set('layout','layout')
 
 app.use(layout);
 app.use(express.static('public'));
-app.use('/',Root)
-
+app.use('/',login)
+app.use('/',add)
 
 app.listen(port,()=>console.log(`Server is running at ${port} in ${new Date().toString().split(' ')[4]}`))
