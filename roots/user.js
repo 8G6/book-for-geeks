@@ -11,3 +11,4 @@ root.get('/dashboard/add',authed,(req,res)=>{
         res.render('add',{name:req.user.name})
 })
     
+root.post()

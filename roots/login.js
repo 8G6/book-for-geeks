@@ -6,13 +6,17 @@ const express     = require('express')
 const root        = express.Router();
 const {hash}      = require('bcrypt')
 const passport    = require('passport') 
-const {init,
-      authed}     = require('../functions/init')
+const {init}      = require('../functions/passport')
+const {authed,
+       notAuth}   = require('../functions/middileware')
 const flash       = require('express-flash')
 const session     = require('express-session')
 const override    = require('method-override')
- 
-let user = [];
+const {writeFile} = require('fs')
+const {promisify} = require('util')
+const  write      = promisify(writeFile)
+let    user      = require('../uplaods/userdata.json')
+
 
 init(passport,
      email=>user.find(user=>user.email === email),
@@ -42,7 +46,7 @@ root.get('/register',authed,(req,res)=>{
     res.render('register')
 })
 
-root.get('/dashboard',(req,res)=>{
+root.get('/dashboard',notAuth,(req,res)=>{
     console.log(req.user.name)
     res.render('dashboard',{name:req.user.name})
 })
@@ -58,10 +62,12 @@ root.post('/register',async(req,res)=>{
             name:req.body.name,
             email:req.body.email,
             pass:pass_enc
-        }    
+        } 
         user.push(data)
+        console.log('user : ',user)
+        await write('./uplaods/userdata.json',JSON.stringify(user))
         res.redirect('/login')
-        console.log(user)
+        console.log(det)
     }catch(e){
         console.log(e)
         res.redirect('/register')

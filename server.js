@@ -10,13 +10,20 @@ const login    = require('./roots/login')
 const add      = require('./roots/add')
 const mongoose = require('mongoose')
 
+
 app.set('view engine','ejs');
-app.set('viwes'.__dirname+'/viwes')
+app.set('viwes',__dirname+'/viwes')
 app.set('layout','layout')
+
+mongoose.connect(process.env.DATABE_URL,{ useUnifiedTopology: true,useNewUrlParser: true });
+const db = mongoose.connection
+db.on('error', error => console.error(error))
+db.once('open', () => console.log('Connected to Mongoose'))
 
 app.use(layout);
 app.use(express.static('public'));
 app.use('/',login)
-app.use('/',add)
+app.use('/dashboard',add)
+app.use(express.urlencoded({ limit:'10mb',extended: false }))
 
 app.listen(port,()=>console.log(`Server is running at ${port} in ${new Date().toString().split(' ')[4]}`))
