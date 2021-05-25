@@ -1,10 +1,14 @@
-# Book for Geeks
-<a align="center" href="https://imgbb.com/"><img src="https://i.ibb.co/kQLj52f/4.png" alt="4"></a>
+
+<p align="center">
+ # Book for Geeks
+  <a align="center" href="https://imgbb.com/"><img src="https://i.ibb.co/kQLj52f/4.png" alt="4"></a>
 
 Our Project Name is Book for Geeks which  is basically a E-book website. 
 As the name suggest we can accesses the website and can view various books of any language according to your preference. User can also select the books according the genre you want or by author name. 
 As every E-Book website does user need to first create account to browse further in to the website.Then afterwards user just need to login to continue browsing.
 The awesome feature about the website is that User can  add Books of their choice. The website is very much user friendly as we can access the books with ease
+</p>
+
 ## Team members
 1. Akhil Raj https://github.com/akhilraj490
 2.  Adnan H https://github.com/AdnanHH
