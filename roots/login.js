@@ -28,7 +28,7 @@ init(passport,
 root.use(express.urlencoded({extended:false}))
 root.use(flash())
 root.use(session({
-    secret:process.env.SECRET_KEY,
+    secret:'key',
     resave:false,
     saveUninitialized:false
 }))
