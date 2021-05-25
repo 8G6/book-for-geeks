@@ -15,7 +15,7 @@ The awesome feature about the website is that User can  add Books of their choic
 2.  Adnan H https://github.com/AdnanHH
 ## Team Id
 - BFH/rec9zWpHX3ZfbjbUi/2021
-## Link to product walkthrough
+## https://drive.google.com/file/d/1wmiTC7nXXvTqtqEUYk864POlklNQ2P1X/preview
 [link to video]
 ## How it Works ?
 
