@@ -1,33 +1,34 @@
 {
-  "name": "book_for_geeks",
+  "name": "bhf",
   "version": "1.0.0",
-  "description": "Basic Book Webstore",
+  "description": "![BFH Banner](https://trello-attachments.s3.amazonaws.com/542e9c6316504d5797afbfb9/542e9c6316504d5797afbfc1/39dee8d993841943b5723510ce663233/Frame_19.png)",
   "main": "server.js",
-  "scripts": {
-    "test": "nodemon server.js",
-    "start": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/DevadutSB/book-for-geeks.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/DevadutSB/book-for-geeks/issues"
-  },
-  "homepage": "https://github.com/DevadutSB/book-for-geeks#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "dotenv": "^9.0.2",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "express-ejs-layouts": "^2.5.0",
-    "express-flash": "0.0.2",
-    "express-session": "^1.17.1",
+    "express-flash": "^0.0.2",
+    "mongoose": "^5.12.10",
     "passport": "^0.4.1",
-    "passport-local": "^1.0.0"
+    "passport-local": "^1.0.0",
+    "express-session": "^1.17.1",
+    "method-override":"^1.17.1"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "scripts": {
+    "test": "nodemon server",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevadutSB/book-for-geeks.git"
+  },
+  "author": "dsb",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DevadutSB/book-for-geeks/issues"
+  },
+  "homepage": "https://github.com/DevadutSB/book-for-geeks#readme"
 }
