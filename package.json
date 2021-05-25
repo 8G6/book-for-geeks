@@ -10,17 +10,13 @@
     "express": "^4.17.1",
     "express-ejs-layouts": "^2.5.0",
     "express-flash": "^0.0.2",
+    "express-session": "^1.17.1",
+    "method-override": "^3.0.0",
     "mongoose": "^5.12.10",
     "passport": "^0.4.1",
-    "passport-local": "^1.0.0",
-    "express-session": "^1.17.1",
-    "method-override":"^1.17.1"
+    "passport-local": "^1.0.0"
   },
   "devDependencies": {},
-  "scripts": {
-    "test": "nodemon server",
-    "start": "node server.js"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/DevadutSB/book-for-geeks.git"
@@ -30,5 +26,10 @@
   "bugs": {
     "url": "https://github.com/DevadutSB/book-for-geeks/issues"
   },
-  "homepage": "https://github.com/DevadutSB/book-for-geeks#readme"
+  "homepage": "https://github.com/DevadutSB/book-for-geeks#readme",
+  "scripts": {
+    "test": "nodemon server",
+    "start": "node server"
+  },
+  "keywords": []
 }
