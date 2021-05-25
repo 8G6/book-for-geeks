@@ -15,10 +15,6 @@ app.set('view engine','ejs');
 app.set('viwes',__dirname+'/viwes')
 app.set('layout','layout')
 
-mongoose.connect(process.env.DATABE_URL,{ useUnifiedTopology: true,useNewUrlParser: true });
-const db = mongoose.connection
-db.on('error', error => console.error(error))
-db.once('open', () => console.log('Connected to Mongoose'))
 
 app.use(layout);
 app.use(express.static('public'));
