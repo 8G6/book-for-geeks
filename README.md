@@ -1,3 +1,5 @@
+![BFH Banner](https://trello-attachments.s3.amazonaws.com/542e9c6316504d5797afbfb9/542e9c6316504d5797afbfc1/39dee8d993841943b5723510ce663233/Frame_19.png)
+
  # Book for Geeks
 <p align="center">
   <a align="center" href="https://imgbb.com/"><img src="https://i.ibb.co/kQLj52f/4.png" alt="4"></a>
@@ -37,13 +39,18 @@ The awesome feature about the website is that User can  add Books of their choic
 8. passport: ^0.4.1,
 9. passport-local: ^1.0.0
 ## How to configure
- To install the projcet ho to the download dir of the project and run  in console
+
+1. Step 1:  To install the projcet ho to the download download the project from GitHub using this cammand
+```console
+git clone https://github.com/DevadutSB/book-for-geeks.git
+```
+2. Step 2 : After downloading the files go the the path in which the project is downloaded and open terminal in that folder and run 
 ```console
 npm install
 ```
 
 ## How to Run
-To install the projcet ho to the download dir of the project and run
+To install the projcet go to the download loaction of the project and run
 ```console
 npm run start 
 ```
