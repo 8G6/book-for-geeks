@@ -12,7 +12,7 @@ root.get('/',notAuth,()=>{
     root.render('dashboard/index')
 })
 
-root.get('/add-book',notAuth,(req,res)=>{
+root.get('/add-book',(req,res)=>{
     res.render('dashboard/add',{name:req.user.name,book:new book()})
 })
 
