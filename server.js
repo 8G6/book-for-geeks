@@ -8,17 +8,14 @@ const port     = process.env.PORT || 3000
 const layout   = require('express-ejs-layouts')
 const login    = require('./roots/login')
 const add      = require('./roots/add')
-const mongoose = require('mongoose')
+
 
 
 app.set('view engine','ejs');
 app.set('viwes',__dirname+'/viwes')
 app.set('layout','layout')
 
-mongoose.connect(process.env.DATABE_URL,{ useUnifiedTopology: true,useNewUrlParser: true });
-const db = mongoose.connection
-db.on('error', error => console.error(error))
-db.once('open', () => console.log('Connected to Mongoose'))
+
 
 app.use(layout);
 app.use(express.static('public'));
