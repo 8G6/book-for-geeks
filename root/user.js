@@ -34,7 +34,7 @@ init(passport,                                                  //../functions/p
 ums.post('/register',async(req,res)=>{
        let data = req.body
        error=await reg(user,data,res,hash) // ../functions/user_manage ,  ../scheme/user
-       console.log('is error: '+error)
+       if(error){console.log(error)}
 })
 
 ums.post('/login',passport.authenticate('local', {
