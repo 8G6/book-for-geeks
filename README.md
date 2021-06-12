@@ -11,13 +11,13 @@ The awesome feature about the website is that User can  add Books of their choic
 </p>
 
 ## Team members
-1. Akhil Raj https://github.com/akhilraj490
-2.  Adnan H https://github.com/AdnanHH
-3.  MK Varun https://github.com/varun200056 
+1. Akhil Raj [https://github.com/akhilraj490]
+2. Adnan H [https://github.com/AdnanHH]
+3. MK Varun [https://github.com/varun200056] 
 ## Team Id
 - BFH/rec9zWpHX3ZfbjbUi/2021
-## https://drive.google.com/file/d/1wmiTC7nXXvTqtqEUYk864POlklNQ2P1X/preview
-[link to video]
+#Vedio Link
+[https://drive.google.com/file/d/1wmiTC7nXXvTqtqEUYk864POlklNQ2P1X/preview]
 ## How it Works ?
 
 1. Step 1 : When user open the website he/she needs to be registred to be acess the routes of the website and to register user need to provide a valid email,a user name and password
