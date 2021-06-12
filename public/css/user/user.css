@@ -1,0 +1,42 @@
+.logo{
+    left:1vw;
+    top:1vh;
+}
+#user-img{
+    display:none;
+}
+nav{
+    height: 25vh;
+}
+#query{
+    display:none;
+}
+#search{
+    display:none;
+}
+h1{
+    color:rgb(73, 4, 4)
+}
+   
+   .login{
+       box-shadow:red 1px 1px 2px;
+       background-color: #fffffff0;
+       position:fixed;
+       top:50%;
+       left:40%;
+       opacity: .5;
+       text-align:center;
+       justify-content:center;
+   }
+   
+   table{
+       padding:20px 20px 20px 20px;
+       opacity: 1;
+       text-align:left;
+   }
+   form{
+       position:fixed;
+       top:50%;
+       left:40%;
+       background-color: aliceblue;
+   }

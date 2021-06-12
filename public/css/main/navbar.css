@@ -17,6 +17,7 @@
     position:fixed;
     left:33vw;
     top:16vh;
+    transform:scale(1.5);
     filter: drop-shadow(5px 5px 5px rgb(0, 255, 85));
 }
 .logo:hover{
@@ -73,7 +74,7 @@ nav{
       
 }
 #search{
-       background-image: url('../pics/icon/search.png');
+       background-image: url('../../pics/icon/search.png');
        width:28px;
        height:28px;
        position:fixed;
@@ -94,10 +95,7 @@ nav{
     height: 5%;
 }
 .user-ui{
-    list-style:none;
     position: fixed;
     left:10%;
-    opacity: 0;
 }
-
 

@@ -1,9 +1,10 @@
 let authed=(req,res,next)=>{
     if(req.isAuthenticated()){
-        return res.redirect('/dashboard')
+        return res.redirect('/')
     }
     return next()
 }
+
 let notAuth=(req,res,next)=>{
     if(req.isAuthenticated()){
         next()

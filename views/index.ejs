@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book for Geeks</title>
-    <link rel="stylesheet" href="css/body.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/main/body.css">
+    <link rel="stylesheet" href="css/main/responsive.css">
 </head>
-<body>
+<body onload="check()">
         <nav>
             <a href="/"><img src="pics/logos/no-bg/1.png" alt="logo" class='logo'></a> 
             <ul class='links'>
@@ -17,10 +17,12 @@
                 <li><a href="/about">About Us</a></li>
                 <li><a href="/contact">Contact Us</a></li>
             </ul>
-            <ul class='user-ui'>
-				<li><a href="/login">Login</a></li>
-				<li><a href="/register">Register</a></li>
+            <ul class='user-ui'>      
+               
 			</ul>
+            <% if(name){%>
+               <%- name %>
+            <% } %>
             <div class="menu-bg" id="menu-bg"></div>
 		<div class="menu-bg" id="menu-bg"></div> 
             <div id="burger" onclick="clik()">
@@ -32,10 +34,9 @@
             <div id='search'></div>
             <img src="pics/icon/no-bg/user-blue.png" alt="img" id='user-img' onclick='Onclick()'>
          </nav>
+         <%- body %>
+        
     <script src="js/main.js"></script>
-    <%- body %>
-    <form action="/logout?_del=DELETE" method="POST">
-      <button type="submit">Logout</button>
-    </form>
+    <script src="js/init.js"></script>
 </body>
 </html>

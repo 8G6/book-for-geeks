@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="css/user/user.css">
+<style>
+    body{
+    background-image: url('../pics/images/login-desktop.jpg');
+   }
+</style>
+<form action="/login" method="POST">
+    <% if(messages.error ) {%>
+        <h1><%= messages.error %></h1>
+    <% } %>
+    <% if(error ) {%>
+        <h1><%= error %></h1>
+    <% } %>
+    <table>
+        <tr>
+            <td>Email</td>
+            <td>:</td>
+            <td><input type="email" name="email"></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td>:</td>
+            <td><input type="password" name="password"></td>
+        </tr>
+        <tr>
+            <td><button type="submit">Login</button></td>
+        </tr>
+    </table>
+    <button onclick="test()">test</button>
+</form>
