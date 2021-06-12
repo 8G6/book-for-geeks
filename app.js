@@ -1,13 +1,17 @@
-a='C:\\Users\\The Ryu\\node_modules\\'
-const express     = require(a+'express')
-const ejs         = require(a+'express-ejs-layouts')
+
+const express     = require('express')
+const ejs         = require('express-ejs-layouts')
 const app         = express()
 const port        = process.env.PORT || 3000
 const user        = require('./root/user')
 const {connect,
-      connection} = require(a+'mongoose');
+      connection} = require('mongoose');
+      
+//If not running in a server
 
-require(a+'dotenv').config()
+if(process.env.NODE_ENV !== 'production'){
+        require('dotenv').config()
+}
 
 connect(process.env.DB_URL, {
     useNewUrlParser: true,

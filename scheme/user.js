@@ -1,5 +1,5 @@
-a='C:\\Users\\The Ryu\\node_modules\\'
-const {model} = require(a+'mongoose')
+
+const {model} = require('mongoose')
 
 user = model('user',{
     name: { 

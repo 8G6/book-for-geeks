@@ -1,11 +1,9 @@
-a='C:\\Users\\The Ryu\\node_modules\\'
-
-const {hash}      = require(a+'bcrypt')
-const passport    = require(a+'passport') 
-const flash       = require(a+'express-flash')
-const session     = require(a+'express-session')
-const override    = require(a+'method-override')
-const ums         = require(a+'express').Router()
+const {hash}      = require('bcrypt')
+const passport    = require('passport') 
+const flash       = require('express-flash')
+const session     = require('express-session')
+const override    = require('method-override')
+const ums         = require('express').Router()
 
 const user        = require('../scheme/user')
 const reg         = require('../functions/user_manage')
@@ -47,12 +45,9 @@ ums.post('/login',passport.authenticate('local', {
 
 ums.get('/',(req,res)=>{
        if(req.user!=undefined){
-        USER=`<form action="/logout?_bye=DELETE" method="POST">${req.user.name} | <button type="submit">Logout</button></form>`  
+              USER=`<form action="/logout?_bye=DELETE" method="POST">${req.user.name} | <button type="submit">Logout</button></form>`  
        } 
-       else{
-              USER=''
-       }
-
+       else{USER=''}
        res.render('index',{body:'',name:USER})
 })
 
