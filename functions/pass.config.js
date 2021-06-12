@@ -1,5 +1,5 @@
-const {Strategy} = require(a+'passport-local')
-const {compare}  = require(a+'bcrypt')
+const {Strategy} = require('passport-local')
+const {compare}  = require('bcrypt')
 
 validate = async(password,user,done) => {
     try{
