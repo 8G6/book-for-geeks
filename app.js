@@ -1,17 +1,21 @@
+//If running in a local server
+if(process.env.NODE_ENV !== 'production'){
+    require('dotenv').config()
+}
 
+//external
 const express     = require('express')
 const ejs         = require('express-ejs-layouts')
-const app         = express()
-const port        = process.env.PORT || 3000
-const user        = require('./root/user')
 const {connect,
       connection} = require('mongoose');
-      
-//If not running in a server
 
-if(process.env.NODE_ENV !== 'production'){
-        require('dotenv').config()
-}
+//internal
+const user        = require('./root/user_manage/service')
+const book        = require('./root/user_interface/book')
+
+
+const app         = express()
+const port        = process.env.PORT || 3000
 
 connect(process.env.DB_URL, {
     useNewUrlParser: true,
@@ -23,16 +27,22 @@ connection.once('open',()=>{
     console.log('Database connected')
 })
 
+//settings
 app.set('view engine','ejs')
 app.set('viwes',__dirname+'/viwes')
 app.set('layout','index')
 
+//middlewares
 app.use(ejs)
 app.use(express.static('public'))
 app.use(express.urlencoded({ limit:'10mb',extended: false }))
+
+//custom
 app.use('/',user)
+app.use('/dashboard',book)
 
-
+//Start express on the given port
 app.listen(port,()=>{
-    console.log(`App started at ${new Date().toString().split(' ')[4]} in port ${port}`)
+    let time=new Date().toString().split(' ')[4]
+    console.log(`App started at ${time} in port ${port}`)
 })

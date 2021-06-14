@@ -1,42 +1,25 @@
 .logo{
-    left:1vw;
+    left:3vw;
     top:1vh;
+    width: 20%;
+    height:15%;
 }
-#user-img{
+#user-img,#search,#query{
     display:none;
 }
 nav{
     height: 25vh;
 }
-#query{
-    display:none;
-}
-#search{
-    display:none;
-}
 h1{
     color:rgb(73, 4, 4)
 }
+
+@media screen and (max-width: 700px){
+    .logo{
+        left:3vw;
+        top:1vh;
+        width: 50%;
+        height:20%;
+    }
+}
    
-   .login{
-       box-shadow:red 1px 1px 2px;
-       background-color: #fffffff0;
-       position:fixed;
-       top:50%;
-       left:40%;
-       opacity: .5;
-       text-align:center;
-       justify-content:center;
-   }
-   
-   table{
-       padding:20px 20px 20px 20px;
-       opacity: 1;
-       text-align:left;
-   }
-   form{
-       position:fixed;
-       top:50%;
-       left:40%;
-       background-color: aliceblue;
-   }

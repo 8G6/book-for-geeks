@@ -1,17 +1,18 @@
 <link rel="stylesheet" href="css/user/user.css">
+<link rel="stylesheet" href="css/user/ums.css">
 <style>
     body{
-    background-image: url('../pics/images/reg-desktop.jpg');
+    background-image: url('../pics/images/login-desktop.jpg');
    }
 </style>
-<form action="/register" method="POST">
-    <h1><%- error %></h1>
+<form action="/login" method="POST">
+    <% if(messages.error ) {%>
+        <h1><%= messages.error %></h1>
+    <% } %>
+    <% if(error ) {%>
+        <h1><%= error %></h1>
+    <% } %>
     <table>
-        <tr>
-            <td>Name</td>
-            <td>:</td>
-            <td><input type="text" name="name"></td>
-        </tr>
         <tr>
             <td>Email</td>
             <td>:</td>
@@ -23,7 +24,8 @@
             <td><input type="password" name="password"></td>
         </tr>
         <tr>
-            <td><button type="submit">I am in</button></td>
+            <td><button type="submit">Login</button></td>
         </tr>
     </table>
+    <button onclick="test()">test</button>
 </form>
