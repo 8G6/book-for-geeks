@@ -1,0 +1,46 @@
+
+.change #l1{
+    height: 100%;
+    opacity: 0;
+    border-radius: 90%;
+    transition:visibility 0s 2s, opacity 2s linear;
+    background-color: cornflowerblue;
+    transform: translateY(-10px) rotateZ(-90deg);
+}
+
+.change #burger{
+   width: auto;
+    height: auto;
+    margin: auto;
+    position:fixed;
+    top:10%;
+    right:7%;
+}
+
+.change #l3{
+    height: 100%;
+    opacity: 0;
+    border-radius: 90%;
+    transition:visibility 0s 2s, opacity 2s linear;
+    background-color: cornflowerblue;
+    transform: translateY(-10px) rotateZ(90deg);
+}
+
+.change #l2{
+    height: 100%;
+    border-radius: 90%;
+    background-image: url('../pics/icon/x.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translateY(-10px) rotateZ(90deg);
+}
+
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+} 
+@keyframes fadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+} 

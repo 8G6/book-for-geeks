@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book for Geeks</title>
+    <link rel="stylesheet" href="/css/main/body.css">
+    <link rel="stylesheet" href="/css/main/responsive.css">
+</head>
+<body onload="check()">
+        <nav>
+            <a href="/"><img src="/pics/logos/no-bg/1.png" alt="logo" class='logo'></a> 
+            <ul class='links'>
+                <li><a href="/">Home</a></li>
+                <li><a href="/category">Categories</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+            </ul>
+            <ul class='user-ui'>      
+               
+			</ul>
+            <% if(name){%>
+               <%- name %>
+            <% } %>
+            <div class="menu-bg" id="menu-bg"></div>
+		<div class="menu-bg"></div> 
+            <div id="burger" onclick="clik()">
+				<div id="l1" class="l"></div>
+				<div id="l2" class="l"></div>
+				<div id="l3" class="l"></div>
+		  </div>
+            <input type="text" name="query" id="query" placeholder='search by name authors etc...'>
+            <div id='search'></div>
+            <img src="/pics/icon/no-bg/user-blue.png" alt="img" id='user-img' onclick="load_user()">
+         </nav>
+         <%- body %>
+        
+    <script src="/js/main.js"></script>
+    <script src="/js/init.js"></script>
+</body>
+</html>

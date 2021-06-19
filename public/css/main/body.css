@@ -1,0 +1,16 @@
+
+@import "animations.css";
+@import "navbar.css";
+*{
+    background-repeat: no-repeat;
+    background-size:cover ;
+    background-position: center;
+    
+}
+
+body{
+    background-image: radial-gradient(circle, rgb(236, 231, 234) 0%,rgb(56, 95, 224) 100%);
+    align-items: center;
+    height: 100vh;
+}
+

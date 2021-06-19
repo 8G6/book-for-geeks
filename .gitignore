@@ -1,0 +1,4 @@
+.env
+*.bat
+exp
+node_modules
