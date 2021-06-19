@@ -1,0 +1,25 @@
+.logo{
+    left:3vw;
+    top:1vh;
+    width: 20%;
+    height:15%;
+}
+#user-img,#search,#query{
+    display:none;
+}
+nav{
+    height: 25vh;
+}
+h1{
+    color:rgb(73, 4, 4)
+}
+
+@media screen and (max-width: 600px){
+    .logo{
+        left:3vw;
+        top:1vh;
+        width: 50%;
+        height:20%;
+    }
+}
+   
