@@ -1,33 +1,44 @@
-<form action='/dashboard/add' method='post'>
+
+<link rel="stylesheet" href="/css/user/books/add.css">
+<link rel="stylesheet" href="/css/user/user.css">
+<form action='add' method='post' id='add'>
     <table>
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>Name of book</td>
+            <td>:</td>
+            <td><input type='text' name='title'></td>
         </tr>
-    </table>
-    <table>
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>Lang</td>
+            <td>:</td>
+            <td> <input type='text' name='lang'></td>
         </tr>
-    </table>
-    <table>
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>file</td>
+            <td>:</td>
+            <td><input type='file' name='cover'></td>
+        </tr>
+        <tr>
+            <td>dis</td>
+            <td>:</td>
+            <td><textarea name='details'>
+            </textarea></td>
+        </tr>
+        <tr>
+            <td>genre</td>
+            <td>:</td>
+            <td><input type='text' name='genre'></td>
+        </tr>
+        <tr>
+            <td>IBN</td>
+            <td>:</td>
+            <td><input type='text' name='ibn'></td>
+        </tr>
+        <tr>
+            <td>year</td>
+            <td>:</td>
+            <td><input type='text' name='year'></td>
         </tr>
     </table>
-    Name of book : <input type='text' name='title'><br>
-    IBN number of book :<input type='text' name='ibn'><br>
-    Lang : <input type='text' name='lang'><br>
-    file : <input type='file' name='cover'><br>
-    link :  <input type='text' name='link'><br>
-    dis  : <textarea name='details'>
-    </textarea><br>
-    genre : <input type='text' name='genre'><br>
-    year : <input type='text' name='year'><br>
     <button value='submit'>Submit</button>
 </form>

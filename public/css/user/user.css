@@ -14,7 +14,7 @@ h1{
     color:rgb(73, 4, 4)
 }
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 600px){
     .logo{
         left:3vw;
         top:1vh;

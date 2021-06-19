@@ -7,24 +7,28 @@ const override    = require('method-override')
 const ums         = require('express').Router()
 //internal
 const user        = require('../../schemes/user')
-const reg         = require('../../functions/register')
-const init        = require('../../functions/pass.config')
-const {authed}    = require('../../functions/auth_check')
-const gen_html    = require('../../functions/gen_user')
-
+const reg         = require('../../functions/user/register')
+const init        = require('../../functions/passport/pass.config')
+const {authed}    = require('../../functions/passport/auth_check')
+const gen_html    = require('../../functions/user/gen_user')
+const nav         = require('../nav/nav')
+const secure      = require('../../functions/secure/Random_Key_Gen')
 
 //middlewares
 ums.use(flash())
 ums.use(session({
-       secret:'secret',
+       secret:secure,
        resave: false,
        saveUninitialized:false
 }))
 ums.use(passport.initialize())
 ums.use(passport.session())
 ums.use(override('_bye'))
+ums.use('/',nav)
 
 let error=' '
+
+console.log(secure)
 
 init(passport,                                                          //../functions/pass.config
      async(email) => {return await user.findOne({email:email}).exec()}, //../scheme/user 
@@ -48,16 +52,14 @@ ums.post('/login',passport.authenticate('local', {
      //########## GET ###############
 
 ums.get('/',(req,res)=>{
-       res.render('index',{body:'',name:gen_html(req)[0]})
+       res.render('nav/home',{name:gen_html(req)[0]})
 })
 
 ums.get('/register',authed,(req,res)=>{
        res.render('user_manage/register',{error:error,name:''})
 })
 
-ums.get('/t',authed,(req,res)=>{
-       res.render()
-})
+
 ums.get('/login',authed,(req,res)=>{
        res.render('user_manage/login',{error:error,name:''})
 })

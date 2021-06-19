@@ -13,7 +13,6 @@ const {connect,
 const user        = require('./root/user_manage/service')
 const book        = require('./root/user_interface/book')
 
-
 const app         = express()
 const port        = process.env.PORT || 3000
 
@@ -30,7 +29,7 @@ connection.once('open',()=>{
 //settings
 app.set('view engine','ejs')
 app.set('viwes',__dirname+'/viwes')
-app.set('layout','index')
+app.set('layout','nav/home')
 
 //middlewares
 app.use(ejs)
